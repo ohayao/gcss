@@ -1,0 +1,278 @@
+//生成宽度
+.width(@per){
+    width:percentage(@per);
+}
+//生成宽度带上左右边距
+.widths(@per,@marginLPer,@marginRPer){
+    width:percentage(@per - @marginLPer - @marginRPer);
+    margin-left: percentage(@marginLPer);
+    margin-right: percentage(@marginRPer);
+}
+//生成栅格
+.cellWidth(@value,@pt,@pb,@pl,@pr,@unit) when (@unit=per){
+    .width(@value);
+    padding:@pt @pr @pb @pl;
+};
+.cellWidth(@value,@pt,@pb,@pl,@pr,@unit) when (@unit=px){
+    width:@value + 0px;
+    padding:(@pt+0px) (@pr+0px) (@pb+0px) (@pl+0px);
+};
+//生成栅格 有边距的
+.cellWidths(@value,@pt,@pb,@pl,@pr,@ml,@mr,@unit) when (@unit=per) {
+    width:percentage(@value) - percentage(@ml) - percentage(@mr);
+    margin-left:percentage(@ml);
+    margin-right:percentage(@mr);
+};
+.cellWidths(@value,@pt,@pb,@pl,@pr,@ml,@mr,@unit) when (@unit=px) {
+    width:(@value+0px)-(@ml+0px)-(@mr+0px);
+    padding:(@pt+0px) (@pr+0px) (@pb+0px) (@pl+0px);
+    margin-left:@ml + 0px;
+    margin-right:@mr + 0px;
+};
+//左边距
+.mLeft(@value,@unit) when (@unit=px){
+    margin-left:@value + 0px;
+};
+.mLeft(@value,@unit) when (@unit=per){
+    margin-left:percentage(@value);
+};
+//右边距
+.mRight(@value,@unit) when (@unit=px){
+    margin-right: @value + 0px;
+};
+.mRight(@value,@unit) when (@unit=per){
+    margin-right: percentage(@value);
+};
+//左右边距
+.mLeftWithRight(@left,@right,@unit) when (@unit=px){
+    margin-left:@left + 0px;
+    margin-right: @right + 0px;
+};
+.mLeftWithRight(@left,@right,@unit) when (@unit=per){
+    margin-left:percentage(@left);
+    margin-right: percentage(@right);
+};
+//左填充
+.pLeft(@value,@unit) when (@unit=px){
+    padding-left:@value + 0px;
+}
+.pLeft(@value,@unit) when (@unit=per){
+    padding-left: percentage(@value);
+}
+//右填充
+.pRight(@value,@unit) when (@unit=px){
+    padding-right:@value + 0px;
+}
+.pRight(@value,@unit) when (@unit=per){
+    padding-right: percentage(@value);
+}
+//左右填充
+.pLeftWithRight(@left,@right,@unit) when (@unit=px){
+    padding-left: @left + 0px;
+    padding-right: @right + 0px;
+}
+.pLeftWithRight(@left,@right,@unit) when (@unit=per){
+    padding-left: percentage(@left);
+    padding-right: percentage(@right);
+}
+
+//生成栅格偏移宽度 有边距的
+.cellOffsets(@per,@margin){
+    margin-left:percentage(@per)+percentage(@margin/2);
+};
+
+//生成超链接样式
+.linkTheme(@color,@hoverColor){
+    text-decoration: none;
+    color:@color;
+    cursor: pointer;
+    &:hover,&:active{
+        color:@hoverColor;
+    }
+};
+
+//生成块样式
+.blockTheme(@border,@padding){
+    display: block;
+    border:@border;
+    padding:@padding;
+    overflow: hidden;
+}
+
+//生成控制面板主题
+.panelTheme(
+    @border,
+    @borderRadius,
+    @headerBgColor,
+    @headerBgImage,
+    @headerBorderBottom,
+    @headerPadding,
+    @headerTitleColor,
+    @headerTitleFontSize,
+    @headerTitlePadding,
+    @headerButtonMargin,
+    @containerPadding
+){
+    border:@border;
+    border-radius: @borderRadius @borderRadius 0 0;
+    >.header{
+        padding: @headerPadding;
+        border-bottom: @headerBorderBottom;
+        background-color: @headerBgColor;
+        background-image: @headerBgImage;
+        overflow: hidden;
+        >.title{
+            color:@headerTitleColor;
+            font-size:@headerTitleFontSize;
+            padding:@headerTitlePadding;
+            font-weight: bold;
+        }
+        >.buttons{
+            float:right;
+            >*{margin:@headerButtonMargin;}
+        }
+    }
+    >.container{
+        width:100%;
+        padding: @containerPadding;
+        overflow: hidden;
+    }
+};
+//生成按钮主题
+.btnTheme(
+    @border,
+    @bgColor,
+    @bgImage,
+    @color,
+    @cursor,
+    @fontSize,
+    @paddingTop,
+    @paddingBottom,
+    @paddingLeft,
+    @paddingRight,
+    @radius,
+    @hoverColor
+){
+    background-color: @bgColor;
+    background-image: @bgImage;
+    border: @border;
+    border-radius: @radius;
+    color:@color;
+    display: inline-block;
+    font-size: @fontSize;
+    padding-left:@paddingLeft;
+    padding-right: @paddingRight;
+    height:@fontSize+@paddingTop+@paddingBottom;
+    line-height: @fontSize+@paddingTop+@paddingBottom;
+    cursor: @cursor;
+    outline: none;
+    white-space: nowrap;
+    i.fa{
+        font-size:@fontSize;
+        margin-right:@fontSize/3;
+    }
+    &:hover{
+        background-color: lighten(@bgColor,15%);
+        color:@hoverColor;
+    }
+};
+
+//生成复选框主题
+.checkTheme(@fontSize,@fontColor,@outBorderWidth,@outBorderColor,@bgColor,@diabledBgColor,@checkBorder,@checkBgColor,@checkInnerBorderWidth,@checkInnerBorderColor){
+    display: inline-block;
+    font-size:@fontSize;
+    vertical-align: middle;
+    color:@fontColor;
+    >input[type="checkbox"]{
+        position: relative;
+        margin:0 3px -2px 3px;
+        width:@fontSize;
+        height:@fontSize;
+        line-height: normal;
+        border:solid @outBorderWidth @outBorderColor;
+        background-color:@bgColor;
+        outline: none;
+        transition: background-color .5s ease-in-out;
+        cursor: pointer;
+        &:checked{
+            background-color: @checkBgColor;
+            border:solid @outBorderWidth @outBorderColor;
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                width:@fontSize*1.125;
+                height:@fontSize/2;
+                border-bottom: solid @checkInnerBorderWidth @checkInnerBorderColor;
+                border-left:solid @checkInnerBorderWidth @checkInnerBorderColor;
+                transform-origin: 0 100%;
+                transform: translateX(@fontSize/2) translateY(@fontSize/4) rotate(-45deg) skewX(-15deg);
+            }
+        }
+        &:disabled{
+            cursor: not-allowed;
+            background-color: @diabledBgColor;
+            &::before{
+                content:'';
+                display: block;
+                position: absolute;
+                top:0;left:0;
+                width:@fontSize - @outBorderWidth*2;
+                height:@fontSize - @outBorderWidth*2;
+                border:solid @outBorderWidth @bgColor;
+                background-color: @diabledBgColor;
+            }
+        }
+    }
+}
+
+//生成单选框主题
+.radioTheme(@fontSize,@fontColor,@outBorderWidth,@outBorderColor,@bgColor,@diabledBgColor,@checkBorder,@checkBgColor,@checkInnerBorderWidth,@checkInnerBorderColor){
+    display: inline-block;
+    font-size:@fontSize;
+    vertical-align: middle;
+    color:@fontColor;
+    >input[type="radio"]{
+        position: relative;
+        margin:0 3px -2px 3px;
+        width:@fontSize;
+        height:@fontSize;
+        border-radius: 50%;;
+        line-height: normal;
+        border:solid @outBorderWidth @outBorderColor;
+        background-color: @bgColor;
+        outline: none;
+        cursor: pointer;
+        transition: background .5s ease-in-out;
+        &:checked{
+            background-color: @checkBgColor;
+            border:solid @outBorderWidth @outBorderColor;
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                width:@fontSize*1.125;
+                height:@fontSize/2;
+                border-bottom: solid @checkInnerBorderWidth @checkInnerBorderColor;
+                border-left:solid @checkInnerBorderWidth @checkInnerBorderColor;
+                transform-origin: 0 100%;
+                transform: translateX(@fontSize/3) translateY(@fontSize/4) rotate(-45deg) skewX(-15deg);
+            }
+        }
+        &:disabled{
+            cursor: not-allowed;
+            background-color: #eee;
+            &::before{
+                content:'';
+                display: block;
+                position: absolute;
+                top:0;left:0;
+                width:@fontSize - @outBorderWidth*2;
+                height:@fontSize - @outBorderWidth*2;
+                border:solid @outBorderWidth @bgColor;
+                background-color: @diabledBgColor;
+                border-radius: 50%;
+            }
+        }
+    }
+}

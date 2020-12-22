@@ -1,0 +1,47 @@
+@import './default.less';
+@import (once) './function.less';
+.g-panel,.g-panel-default{
+    .panelTheme(
+        @panelBorderStyle @panelBorderWidth #ccc,@panelBorderRadius,
+        #ccc,none,
+        @panelHeaderBorderBottomStyle @panelHeaderBorderBottomWidth #ccc,
+        @panelHeaderPadding,
+        #000,@panelHeaderTitleFontSize,@panelHeaderTitlePadding,@panelHeaderButtonMargin,@panelContainerPadding
+    );
+}
+.g-panel-black{
+    .panelTheme(
+        @panelBorderStyle @panelBorderWidth @cBlack,@panelBorderRadius,
+        @cBlack,none,
+        @panelHeaderBorderBottomStyle @panelHeaderBorderBottomWidth @cBlack,
+        @panelHeaderPadding,
+        @cWhite,@panelHeaderTitleFontSize,@panelHeaderTitlePadding,@panelHeaderButtonMargin,@panelContainerPadding
+    );
+}
+.g-panel-success{
+    .panelTheme(
+        @panelBorderStyle @panelBorderWidth @cSuccess,@panelBorderRadius,
+        @cSuccess,none,
+        @panelHeaderBorderBottomStyle @panelHeaderBorderBottomWidth @cSuccess,
+        @panelHeaderPadding,
+        @cWhite,@panelHeaderTitleFontSize,@panelHeaderTitlePadding,@panelHeaderButtonMargin,@panelContainerPadding
+    );
+}
+.g-panel-warn{
+    .panelTheme(
+        @panelBorderStyle @panelBorderWidth @cWarn,@panelBorderRadius,
+        @cWarn,none,
+        @panelHeaderBorderBottomStyle @panelHeaderBorderBottomWidth @cWarn,
+        @panelHeaderPadding,
+        @cWhite,@panelHeaderTitleFontSize,@panelHeaderTitlePadding,@panelHeaderButtonMargin,@panelContainerPadding
+    );
+}
+.g-panel-danger{
+    .panelTheme(
+        @panelBorderStyle @panelBorderWidth @cDanger,@panelBorderRadius,
+        @cDanger,none,
+        @panelHeaderBorderBottomStyle @panelHeaderBorderBottomWidth @cDanger,
+        @panelHeaderPadding,
+        @cWhite,@panelHeaderTitleFontSize,@panelHeaderTitlePadding,@panelHeaderButtonMargin,@panelContainerPadding
+    ); 
+}

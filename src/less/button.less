@@ -1,0 +1,71 @@
+@import (once) './default.less';
+@import (once) './function.less';
+
+.g-btn,.g-btn-default{
+    .btnTheme(none,#ccc,none,#000,pointer,@btnDefaultFontSize,@btnDefaultPaddingTop,@btnLargePaddingBottom,@btnDefaultPaddingLeft,@btnDefaultPaddingRight,@btnDefaultBorderRadius,#000);
+}
+.g-btn-s,.g-btn-default-s{
+    .btnTheme(none,#ccc,none,#000,pointer,@btnSmallFontSize,@btnSmallPaddingTop,@btnSmallPaddingBottom,@btnSmallPaddingLeft,@btnSmallPaddingLeft,@btnSmallBorderRadius,#000);
+}
+.g-btn-l,.g-btn-default-l{
+    .btnTheme(none,#ccc,none,#000,pointer,@btnLargeFontSize,@btnLargePaddingTop,@btnLargePaddingBottom,@btnLargePaddingLeft,@btnLargePaddingLeft,@btnLargeBorderRadius,#000);
+}
+
+.g-btn-black{
+    .btnTheme(none,@cBlack,none,@cWhite,pointer,@btnDefaultFontSize,@btnDefaultPaddingTop,@btnLargePaddingBottom,@btnDefaultPaddingLeft,@btnDefaultPaddingRight,@btnDefaultBorderRadius,@cWhite);
+}
+.g-btn-black-s{
+    .btnTheme(none,@cBlack,none,@cWhite,pointer,@btnSmallFontSize,@btnSmallPaddingTop,@btnSmallPaddingBottom,@btnSmallPaddingLeft,@btnSmallPaddingLeft,@btnSmallBorderRadius,@cWhite);
+}
+.g-btn-black-l{
+    .btnTheme(none,@cBlack,none,@cWhite,pointer,@btnLargeFontSize,@btnLargePaddingTop,@btnLargePaddingBottom,@btnLargePaddingLeft,@btnLargePaddingLeft,@btnLargeBorderRadius,@cWhite);
+}
+
+.g-btn-success{
+    .btnTheme(none,@cSuccess,none,@cWhite,pointer,@btnDefaultFontSize,@btnDefaultPaddingTop,@btnLargePaddingBottom,@btnDefaultPaddingLeft,@btnDefaultPaddingRight,@btnDefaultBorderRadius,@cWhite);
+}
+.g-btn-success-s{
+    .btnTheme(none,@cSuccess,none,@cWhite,pointer,@btnSmallFontSize,@btnSmallPaddingTop,@btnSmallPaddingBottom,@btnSmallPaddingLeft,@btnSmallPaddingLeft,@btnSmallBorderRadius,@cWhite);
+}
+.g-btn-success-l{
+    .btnTheme(none,@cSuccess,none,@cWhite,pointer,@btnLargeFontSize,@btnLargePaddingTop,@btnLargePaddingBottom,@btnLargePaddingLeft,@btnLargePaddingLeft,@btnLargeBorderRadius,@cWhite);
+}
+
+.g-btn-warn{
+    .btnTheme(none,@cWarn,none,@cWhite,pointer,@btnDefaultFontSize,@btnDefaultPaddingTop,@btnLargePaddingBottom,@btnDefaultPaddingLeft,@btnDefaultPaddingRight,@btnDefaultBorderRadius,@cWhite);
+}
+.g-btn-warn-s{
+    .btnTheme(none,@cWarn,none,@cWhite,pointer,@btnSmallFontSize,@btnSmallPaddingTop,@btnSmallPaddingBottom,@btnSmallPaddingLeft,@btnSmallPaddingLeft,@btnSmallBorderRadius,@cWhite);
+}
+.g-btn-warn-l{
+    .btnTheme(none,@cWarn,none,@cWhite,pointer,@btnLargeFontSize,@btnLargePaddingTop,@btnLargePaddingBottom,@btnLargePaddingLeft,@btnLargePaddingLeft,@btnLargeBorderRadius,@cWhite);
+}
+
+.g-btn-danger{
+    .btnTheme(none,@cDanger,none,@cWhite,pointer,@btnDefaultFontSize,@btnDefaultPaddingTop,@btnLargePaddingBottom,@btnDefaultPaddingLeft,@btnDefaultPaddingRight,@btnDefaultBorderRadius,@cWhite);
+}
+.g-btn-danger-s{
+    .btnTheme(none,@cDanger,none,@cWhite,pointer,@btnSmallFontSize,@btnSmallPaddingTop,@btnSmallPaddingBottom,@btnSmallPaddingLeft,@btnSmallPaddingLeft,@btnSmallBorderRadius,@cWhite);
+}
+.g-btn-danger-l{
+    .btnTheme(none,@cDanger,none,@cWhite,pointer,@btnLargeFontSize,@btnLargePaddingTop,@btnLargePaddingBottom,@btnLargePaddingLeft,@btnLargePaddingLeft,@btnLargeBorderRadius,@cWhite);
+}
+
+.g-btn-disabled{
+    .btnTheme(none,@cDisabled,none,@cBlack,not-allowed,@btnDefaultFontSize,@btnDefaultPaddingTop,@btnLargePaddingBottom,@btnDefaultPaddingLeft,@btnDefaultPaddingRight,@btnDefaultBorderRadius,@cBlack);
+    &:hover{
+        background-color: @cDisabled;
+    }
+}
+.g-btn-disabled-s{
+    .btnTheme(none,@cDisabled,none,@cBlack,not-allowed,@btnSmallFontSize,@btnSmallPaddingTop,@btnSmallPaddingBottom,@btnSmallPaddingLeft,@btnSmallPaddingLeft,@btnSmallBorderRadius,@cBlack);
+    &:hover{
+        background-color: @cDisabled;
+    }
+}
+.g-btn-disabled-l{
+    .btnTheme(none,@cDisabled,none,@cBlack,not-allowed,@btnLargeFontSize,@btnLargePaddingTop,@btnLargePaddingBottom,@btnLargePaddingLeft,@btnLargePaddingLeft,@btnLargeBorderRadius,@cBlack);
+    &:hover{
+        background-color: @cDisabled;
+    } 
+}

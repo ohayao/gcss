@@ -1,0 +1,64 @@
+@import (once) '../less/default.less';
+@import (once) '../less/util.less';
+@import (once) '../less/function.less';
+@import (once) '../less/button.less';
+@import (once) '../less/form.less';
+@import (once) '../less/col.less';
+@import (once) '../less/panel.less';
+@import (once) '../less/table.less';
+
+.g-ma{margin:10px;}
+.g-mt{margin-top: 10px;}
+.g-mb{margin-bottom: 10px;}
+.g-ml{margin-left: 10px;}
+.g-mr{margin-right: 10px;}
+
+//超链接颜色
+a,.g-link-default{.linkTheme(#333,blue);}
+.g-link-black{.linkTheme(@cBlack,@cDanger);}
+.g-link-success{.linkTheme(@cSuccess,@cDanger);}
+.g-link-warn{.linkTheme(@cWarn,@cDanger);}
+.g-link-danger{.linkTheme(@cDanger,@cDanger);}
+.g-link-white{.linkTheme(@cWhite,@cDanger);}
+
+//块颜色
+.g-block,.g-block-default{.blockTheme(none,5px 5px 5px 5px);}
+.g-block-black{.blockTheme(solid 1px @cBlack,5px);}
+.g-block-success{.blockTheme(solid 1px @cSuccess,5px);}
+.g-block-warn{.blockTheme(solid 1px @cWarn,5px);}
+.g-block-danger{.blockTheme(solid 1px @cDanger,5px);}
+
+//背景色
+.g-bg-black{background-color: @cBlack;}
+.g-bg-success{background-color: @cSuccess;}
+.g-bg-warn{background-color: @cWarn;}
+.g-bg-danger{background-color: @cDanger;}
+
+//文字颜色
+.g-txt-white{color:@cWhite}
+.g-txt-black{color:@cBlack}
+.g-txt-success{color:@cSuccess}
+.g-txt-warn{color:@cWarn}
+.g-txt-danger{color:@cDanger}
+
+.g-table,.g-table-default{
+    .tableTheme(12px,#666,@cWhite,solid 1px #ccc,solid 2px #ccc,darken(#ccc,30%),@cWhite,#ededed,none);
+}
+.g-table-black{
+    .tableTheme(12px,@cBlack,@cWhite,solid 1px @cBlack,solid 2px @cBlack,darken(@cBlack,30%),@cWhite,#dedede,none);
+}
+.g-table-success{
+    .tableTheme(12px,@cSuccess,@cWhite,solid 1px @cSuccess,solid 2px @cSuccess,darken(@cSuccess,30%),@cWhite,#f7fff2,none);
+}
+.g-table-warn{
+    .tableTheme(12px,@cWarn,@cWhite,solid 1px @cWarn,solid 2px @cWarn,darken(@cWarn,30%),@cWhite,#fceeca,none);
+}
+.g-table-danger{
+    .tableTheme(12px,@cDanger,@cWhite,solid 1px @cDanger,solid 2px @cDanger,darken(@cDanger,30%),@cWhite,#ffefef,none);
+}
+.g-noborder{
+    border:none;
+    >tr td,>tr th,
+    >tbody td,>tbody th,>tbody tr td,>tbody tr th,
+    >tfoot td,>tfoot th,>tfoot tr td,>tfoot tr th{border:none;}
+}

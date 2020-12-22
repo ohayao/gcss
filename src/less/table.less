@@ -1,0 +1,42 @@
+.tableTheme(@size,@color,@bgColor,@borderStyle,@headerBoderBottomStyle,@headerBgColor,@headerColor,@hoverBgColor,@hoverColor){
+    border-collapse: collapse;
+    border:@borderStyle;
+    >tbody tr{
+        background-color: @bgColor;
+        &:hover{
+            background-color: @hoverBgColor;
+        }
+    }
+    >tbody tr td,
+    >tbody tr th,
+    >tr td,>tr th{
+        font-size: @size;
+        font-weight: normal;
+        padding:@size * 0.8 @size * 0.5;
+        border:@borderStyle;
+        color:@color;
+        word-break: break-all;
+        white-space: normal;
+        &:hover{
+            background-color: @headerBgColor;
+            color:@headerColor;
+        }
+    }
+    >thead tr td,
+    >thead tr th,
+    >tfoot tr td,
+    >tfoot tr th{
+        font-size:@size*1.25;
+        font-weight: bolder;
+        border-bottom: @headerBoderBottomStyle;
+        padding:@size * 0.8 @size * 0.5;
+        background-color: @headerBgColor;
+        color:@headerColor;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        &:hover{
+            background-color: @headerBgColor;
+        }
+    }
+}

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/gcss-all.css">
+    <style type="text/css">
+        div.temp div{
+            background-color: #ccc;
+            height: 50px;
+            border:dotted 1px #eee;
+            overflow: hidden;
+            padding:15px 0;
+            text-align: center;
+            color:#000;
+            float: left;
+        }
+        div.temp1 div{
+            background-color: #ccc;
+            height: 50px;
+            overflow: hidden;
+            padding:15px 0;
+            text-align: center;
+            color:#000;
+            font-weight: bold;
+            float: left;
+        }
+        code{
+            font-size:1.5em;
+        }
+    </style>
+</head>
+<body class="g-ma">
+    <div class="g-panel-warn g-w12 g-mt">
+        <div class="header">
+            <span class="title">块</span>
+            <div class="buttons">
+                <span class="g-btn-black-s">span按钮1</span>
+                <button class="g-btn-success-s">button按钮2</button>
+                <a class="g-link-danger">linkButton</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="g-panel-black g-w100">
+                <div class="header">
+                    <span class="title">无边框</span>
+                </div>
+                <div class="container">
+                    <div class="g-block g-bg-success g-txt-white g-w3 fl">
+                        <code>
+                            &lt;div class="g-block g-bg-success g-txt-white"&gt;
+                                123456
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                    <div class="g-block g-bg-warn g-txt-white g-w3 fl">
+                        <code>
+                            &lt;div class="g-block g-bg-warn g-txt-white"&gt;
+                                123456
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                    <div class="g-block g-bg-black g-txt-white g-w3 fl">
+                        <code>
+                            &lt;div class="g-block g-bg-black g-txt-white"&gt;
+                                123456
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                    <div class="g-block g-bg-danger g-txt-white g-w3 fl">
+                        <code>
+                            &lt;div class="g-block g-bg-danger g-txt-white"&gt;
+                                123456
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <div class="g-panel-success g-w100 g-mt">
+                <div class="header">
+                    <span class="title">有边框</span>
+                </div>
+                <div class="container">
+                    <div class="g-block-danger g-bg-success g-txt-white g-ws3 fl">
+                        <code>
+                            &lt;div class="g-block-danger g-bg-success g-txt-white"&gt;
+                                123456
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                    <div class="g-block-black g-bg-warn g-txt-white g-ws3 fl">
+                        <code>
+                            &lt;div class="g-block-black g-bg-warn g-txt-white"&gt;
+                                123456
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                    <div class="g-block-success g-bg-black g-txt-white g-ws3 fl">
+                        <code>
+                            &lt;div class="g-block-success g-bg-black g-txt-white"&gt;
+                                123456
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                    <div class="g-block-warn g-bg-danger g-txt-white g-ws3 fl">
+                        <code>
+                            &lt;div class="g-block-warn g-bg-danger g-txt-white"&gt;
+                                123456
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <div class="g-panel-warn g-w100 g-mt">
+                <div class="header">
+                    <span class="title">自定义边框</span>
+                </div>
+                <div class="container">
+                    <div class="g-block-danger g-w3 fl">
+                        <a class="g-link-success">乘法和除法不作转换</a>。因为这两种运算在大多数情况下都没有意义，一个长度乘以一个长度就得到一个区域，而 CSS 是不支持指定区域的。Less 将按数字的原样进行操作，并将为计算结果指定明确的单位类型
+                    </div>
+                    <div class="g-block-black g-w3 g-bg-warn g-txt-danger fl">
+                        <a class="g-link-danger">算术运算符</a> +、-、*、/ 可以对<a class="g-link-warn">任何数字、颜色或变量</a>进行运算。如果可能的话，算术运算符在加、减或比较之前会进行单位换算。计算的结果以最左侧操作数的单位类型为准
+                    </div>
+                    <div class="g-block g-bg-success g-ws3 fl" style="border-left:solid 10px #ff0;">
+                        <a class="g-link-danger">算术运算符</a> +、-、*、/ 可以对<a class="g-link-warn">任何数字、颜色或变量</a>进行运算。如果可能的话，算术运算符在加、减或比较之前会进行单位换算。计算的结果以最左侧操作数的单位类型为准
+                    </div>
+                    <div class="g-block g-bg-black g-txt-white g-ws3 fl" style="border-right:solid 10px #f00;">
+                        <a class="g-link-success">乘法和除法不作转换</a>。因为这两种运算在大多数情况下都没有意义，一个长度乘以一个长度就得到一个区域，而 CSS 是不支持指定区域的。Less 将按数字的原样进行操作，并将为计算结果指定明确的单位类型
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+    <div class="g-panel-black g-w12 g-mt">
+        <div class="header">
+            <span class="title">栅格</span>
+            <div class="buttons">
+                <a href="#" class="g-link-black"><i class="fa fa-edit"></i>编辑</a>
+                <a class="g-link-success"><i class="fa fa-plus"></i>新增</a>
+                <a class="g-link-white"><i class="fa fa-trash"></i>Delete</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="g-panel-success g-ws6 fl">
+                <div class="header">
+                    <span class="title">无边距</span>
+                </div>
+                <div class="container">
+                    <div class="g-block temp">
+                        <div class="g-col-1">1</div>
+                        <div class="g-col-2">2</div>
+                        <div class="g-col-3">3</div>
+                        <div class="g-col-4">4</div>
+                        <div class="g-col-2">2</div>
+                    </div>
+                    <div class="g-block temp g-mt">
+                        <div class="g-col-2">2</div>
+                        <div class="g-col-2">2</div>
+                        <div class="g-col-3">3</div>
+                        <div class="g-col-5">5</div>
+                    </div>
+                    <div class="g-block temp g-mt">
+                        <div class="g-col-6 g-col-offset-3">6</div>
+                    </div>
+                    <div class="g-block temp g-mt">
+                        <div class="g-col-5">5</div>
+                        <div class="g-col-7">7</div>
+                    </div>
+                    <div class="g-block temp g-mt">
+                        <div class="g-col-1">1</div>
+                        <div class="g-col-2 g-col-offset-1">2</div>
+                        <div class="g-col-2 g-col-offset-1">2</div>
+                        <div class="g-col-4 g-col-offset-1">4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="g-panel-danger g-ws6 fl">
+                <div class="header">
+                    <span class="title">有边距</span>
+                </div>
+                <div class="container">
+                    <div class="g-block temp1">
+                        <div class="g-cols-1">1</div>
+                        <div class="g-cols-2">2</div>
+                        <div class="g-cols-3">3</div>
+                        <div class="g-cols-4">4</div>
+                        <div class="g-cols-2">2</div>
+                    </div>
+                    <div class="g-block temp1 g-mt">
+                        <div class="g-cols-2">2</div>
+                        <div class="g-cols-2">2</div>
+                        <div class="g-cols-3">3</div>
+                        <div class="g-cols-5">5</div>
+                    </div>
+                    <div class="g-block temp1 g-mt">
+                        <div class="g-cols-6 g-cols-offset-3">6</div>
+                    </div>
+                    <div class="g-block temp1 g-mt">
+                        <div class="g-cols-5">5</div>
+                        <div class="g-cols-7">7</div>
+                    </div>
+                    <div class="g-block temp1 g-mt">
+                        <div class="g-cols-1">1</div>
+                        <div class="g-cols-2 g-cols-offset-1">2</div>
+                        <div class="g-cols-2 g-cols-offset-1">2</div>
+                        <div class="g-cols-4 g-cols-offset-1">4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="g-panel g-w12 g-mt">
+        <div class="header">
+            <span class="title">表单</span>
+            <div class="buttons">
+                <a href="#" class="g-link-success">link按钮</a>
+                <span class="g-btn-danger-s">span 按钮</span>
+                <a href="#">More</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="g-form">
+                <input class="g-input g-w10" type="text" placeholder="请输入用户名" />
+                <input class="g-input g-w12 g-mt" type="password" placeholder="请输入密码" />
+                <lable class="g-input g-input-file g-w12 g-mt"><input type="file" /></lable>
+                <div class="g-input-file" style="border:solid 3px #eee;border-radius: 5px;width:100px;height:100px; text-align: center;padding-top:18px;color:#999">
+                    <i class="fa fa-upload" style="font-size:64px;width:64px;height:64px;"></i>
+                    <input type="file" name="" id="">
+                </div>
+                <div class="g-input-file" style="border:solid 3px #eee;border-radius: 5px;width:100px;height:100px; text-align: center;padding-top:18px;color:#999">
+                    <i class="fa fa-plus" style="font-size:64px;width:64px;height:64px;"></i>
+                    <input type="file" name="" id="">
+                </div>
+                <textarea class="g-textarea g-w12 g-mt" style="height:70px" placeholder="请输入内容"></textarea>
+                <select class="g-select g-w12 g-mt"><option value="0">请选择</option><option value="1">Hello 你好</option></select>
+                <div class="g-mt cls">
+                    <input class="g-input g-w6 fl" type="text" readonly placeholder="readonly" />
+                    <input class="g-input g-w6 fl" type="password" disabled placeholder="disabled" />
+                </div>
+                <div class="g-block-black cls g-mt">
+                    <div class="g-ws3 fl">
+                        <div class="g-panel-warn">
+                            <div class="header">
+                                <span class="title">复选框</span>
+                            </div>
+                            <div class="container" style="padding:15px">
+                                <div class="cls">
+                                    <label class="g-check"><input type="checkbox" name="direction" value="0" />东</label>
+                                    <label class="g-check"><input type="checkbox" name="direction" value="1" />西</label>
+                                    <label class="g-check"><input type="checkbox" name="direction" value="2" checked />南</label>
+                                    <label class="g-check"><input type="checkbox" name="direction" value="3" disabled />北</label>
+                                </div>
+                                <div class="cls g-mt">
+                                    <label class="g-check-danger"><input type="checkbox" name="direction" value="0" />东</label>
+                                    <label class="g-check-danger"><input type="checkbox" name="direction" value="1" />西</label>
+                                    <label class="g-check-danger"><input type="checkbox" name="direction" value="2" checked />南</label>
+                                    <label class="g-check-danger"><input type="checkbox" name="direction" value="3" disabled />北</label>
+                                </div>
+                                <div class="cls g-mt">
+                                    <label class="g-check-black"><input type="checkbox" name="direction" value="0" />东</label>
+                                    <label class="g-check-black"><input type="checkbox" name="direction" value="1" />西</label>
+                                    <label class="g-check-black"><input type="checkbox" name="direction" value="2" checked />南</label>
+                                    <label class="g-check-black"><input type="checkbox" name="direction" value="3" disabled />北</label>
+                                </div>
+                                <div class="cls g-mt">
+                                    <label class="g-check-success"><input type="checkbox" name="direction" value="0" />东</label>
+                                    <label class="g-check-success"><input type="checkbox" name="direction" value="1" />西</label>
+                                    <label class="g-check-success"><input type="checkbox" name="direction" value="2" checked />南</label>
+                                    <label class="g-check-success"><input type="checkbox" name="direction" value="3" disabled />北</label>
+                                </div>
+                                <div class="cls g-mt">
+                                    <label class="g-check-warn"><input type="checkbox" name="direction" value="0" />东</label>
+                                    <label class="g-check-warn"><input type="checkbox" name="direction" value="1" />西</label>
+                                    <label class="g-check-warn"><input type="checkbox" name="direction" value="2" checked />南</label>
+                                    <label class="g-check-warn"><input type="checkbox" name="direction" value="3" disabled />北</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-ws3 fl">
+                        <div class="g-panel-success">
+                            <div class="header">
+                                <span class="title">单选框</span>
+                            </div>
+                            <div class="container" style="padding:15px">
+                                <div class="cls">
+                                    <label class="g-radio"><input type="radio" name="dir" value="0" />东</label>
+                                    <label class="g-radio"><input type="radio" name="dir" value="1" />西</label>
+                                    <label class="g-radio"><input type="radio" name="dir" value="2" checked />南</label>
+                                    <label class="g-radio"><input type="radio" name="dir" value="3" disabled />北</label>
+                                </div>
+                                <div class="cls g-mt">
+                                    <label class="g-radio-danger"><input type="radio" name="dir1" value="0" />东</label>
+                                    <label class="g-radio-danger"><input type="radio" name="dir1" value="1" />西</label>
+                                    <label class="g-radio-danger"><input type="radio" name="dir1" value="2" checked />南</label>
+                                    <label class="g-radio-danger"><input type="radio" name="dir1" value="3" disabled />北</label>
+                                </div>
+                                <div class="cls g-mt">
+                                    <label class="g-radio-warn"><input type="radio" name="dir2" value="0" />东</label>
+                                    <label class="g-radio-warn"><input type="radio" name="dir2" value="1" />西</label>
+                                    <label class="g-radio-warn"><input type="radio" name="dir2" value="2" checked />南</label>
+                                    <label class="g-radio-warn"><input type="radio" name="dir2" value="3" disabled />北</label>
+                                </div>
+                                <div class="cls g-mt">
+                                    <label class="g-radio-success"><input type="radio" name="dir3" value="0" />东</label>
+                                    <label class="g-radio-success"><input type="radio" name="dir3" value="1" />西</label>
+                                    <label class="g-radio-success"><input type="radio" name="dir3" value="2" checked />南</label>
+                                    <label class="g-radio-success"><input type="radio" name="dir3" value="3" disabled />北</label>
+                                </div>
+                                <div class="cls g-mt">
+                                    <label class="g-radio-black"><input type="radio" name="dir4" value="0" />东</label>
+                                    <label class="g-radio-black"><input type="radio" name="dir4" value="1" />西</label>
+                                    <label class="g-radio-black"><input type="radio" name="dir4" value="2" checked />南</label>
+                                    <label class="g-radio-black"><input type="radio" name="dir4" value="3" disabled />北</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-ws3 fl">
+                        <div class="g-panel-black">
+                            <div class="header">
+                                <span class="title"><i class="fa fa-user fa-fw"></i> 登录</span>
+                            </div>
+                            <div class="container">
+                                <div class="g-block" style="border: none;">
+                                    <div class="g-w3 fl" style="line-height: 36px; text-align: center;">用户名</div><div class="g-w9 fl"><input type="text" class="g-input g-w12"></div>
+                                </div>
+                                <div class="g-block g-mt" style="border: none;">
+                                    <div class="g-w3 fl" style="line-height: 36px; text-align: center;">密码</div><div class="g-w9 fl"><input type="password" class="g-input g-w12"></div>
+                                </div>
+                                <div class="g-block g-mt" style="border: none;">
+                                    <label class="g-check-black fr"><input type="checkbox" name="abc" checked />记住我</label>
+                                </div>
+                                <div class="g-block g-mt" style="border: none;">
+                                    <button class="g-w6 g-col-offset-6 g-btn-black-l">登录</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-ws3 fl">
+                        <div class="g-panel-warn">
+                            <div class="header">
+                                <span class="title">登录</span>
+                                <div class="buttons">
+                                    <a class="g-link-danger"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="g-block" style="border: none;">
+                                    <div class="g-w3 fl" style="line-height: 36px; text-align: center;">用户名</div><div class="g-w9 fl"><input type="text" class="g-input g-w12"></div>
+                                </div>
+                                <div class="g-block g-mt" style="border: none;">
+                                    <div class="g-w3 fl" style="line-height: 36px; text-align: center;">密码</div><div class="g-w9 fl"><input type="password" class="g-input g-w12"></div>
+                                </div>
+                                <div class="g-block g-mt" style="border: none;">
+                                    <label class="g-check-warn fr"><input type="checkbox" name="abc" checked />记住我</label>
+                                </div>
+                                <div class="g-block g-mt" style="border: none;">
+                                    <button class="g-w12 g-btn-warn-l">登录</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="g-panel-danger g-w12 g-mt">
+        <div class="header">
+            <span class="title">按钮</span>
+            <div class="buttons">
+                <button class="g-btn-default-s"><i class="fa fa-angle-down"></i>按钮</button>
+                <button class="g-btn-warn-s"><i class="fa fa-cog"></i>按钮</button>
+                <button class="g-btn-success-s"><i class="fa fa-caret-down"></i>按钮</button>
+                <button class="g-btn-black-s"><i class="fa fa-caret-right"></i>按钮</button>
+                <button class="g-btn-success-s"><i class="fa fa-caret-left"></i>Button</button>
+                <button class="g-btn-warn-s"><i class="fa fa-caret-up"></i>123456</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="g-panel g-cols-3 fl">
+                <div class="header">
+                    <span class="title">按钮</span>
+                </div>
+                <div class="container">
+                    <button class="g-btn-s">按钮</button>
+                    <button class="g-btn">按钮</button>
+                    <button class="g-btn-l">按钮</button>
+                </div>
+            </div>
+            <div class="g-panel-black g-cols-3 fl">
+                <div class="header">
+                    <span class="title">按钮</span>
+                </div>
+                <div class="container">
+                    <button class="g-btn-black-s">按钮</button>
+                    <button class="g-btn-black">按钮</button>
+                    <button class="g-btn-black-l">按钮</button>
+                </div>
+            </div>
+            <div class="g-panel-success g-cols-3 fl">
+                <div class="header">
+                    <span class="title">按钮</span>
+                </div>
+                <div class="container">
+                    <button class="g-btn-success-s">按钮</button>
+                    <button class="g-btn-success">按钮</button>
+                    <button class="g-btn-success-l">按钮</button>
+                </div>
+            </div>
+            <div class="g-panel-warn g-cols-3 fl">
+                <div class="header">
+                    <span class="title">警告</span>
+                </div>
+                <div class="container">
+                    <button class="g-btn-warn-s">按钮</button>
+                    <button class="g-btn-warn">按钮</button>
+                    <button class="g-btn-warn-l">按钮</button>
+                </div>
+            </div>
+            <div class="g-panel-danger g-cols-3 g-mt fl">
+                <div class="header">
+                    <span class="title">危险</span>
+                </div>
+                <div class="container">
+                    <button class="g-btn-danger-s">按钮</button>
+                    <button class="g-btn-danger">按钮</button>
+                    <button class="g-btn-danger-l">按钮</button>
+                </div>
+            </div>
+            <div class="g-panel g-cols-3 g-mt fl">
+                <div class="header">
+                    <span class="title">禁用</span>
+                </div>
+                <div class="container">
+                    <button class="g-btn-disabled-s">按钮</button>
+                    <button class="g-btn-disabled">按钮</button>
+                    <button class="g-btn-disabled-l">按钮</button>
+                </div>
+            </div>
+            <div class="g-panel-warn g-cols-6 g-mt fl">
+                <div class="header">
+                    <span class="title">添加图标</span>
+                </div>
+                <div class="container">
+                    <button class="g-btn-disabled-s"><i class="fa fa-home"></i>按钮</button>
+                    <button class="g-btn-disabled"><i class="fa fa-home"></i>按钮</button>
+                    <button class="g-btn-disabled-l"><i class="fa fa-home"></i>按钮</button>
+                    <button class="g-btn-danger-s"><i class="fa fa-home"></i>按钮</button>
+                    <button class="g-btn-success"><i class="fa fa-home"></i>按钮</button>
+                    <button class="g-btn-warn-l"><i class="fa fa-home"></i>按钮</button>
+                    <button class="g-btn-black-l"><i class="fa fa-bars"></i>按钮</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="g-panel-black g-w12 g-mt">
+        <div class="header">
+            <span class="title">表格</span>
+            <div class="buttons">
+                <a href="#">按钮</a>
+                <a href="#">按钮</a>
+                <a href="#">More</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="g-panel g-ws6 g-mt fl">
+                <div class="header"><span class="title">表格</span></div>
+                <div class="container">
+                    <table class="g-table-default g-noborder g-w100">
+                        <thead>
+                            <tr>
+                                <td>编号</td>
+                                <td>Number</td>
+                                <td>Col3</td>
+                                <td>Col4</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>第一</td>
+                                <td>Zhang san</td>
+                                <td>13312345678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row2</td>
+                                <td>李四</td>
+                                <td>13355545678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row3</td>
+                                <td>Wang wu</td>
+                                <td>13366645678</td>
+                                <td>中国广东深圳罗湖</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row4</td>
+                                <td>Wang zhe</td>
+                                <td>13388845678</td>
+                                <td>中国广东深圳宝安</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">共1页4条</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="g-panel-default g-ws6 g-mt fl">
+                <div class="header"><span class="title">无边框 默认</span></div>
+                <div class="container">
+                    <table class="g-table-default g-w100">
+                        <thead>
+                            <tr>
+                                <td>编号</td>
+                                <td>Number</td>
+                                <td>Col3</td>
+                                <td>Col4</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>第一</td>
+                                <td>Zhang san</td>
+                                <td>13312345678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row2</td>
+                                <td>李四</td>
+                                <td>13355545678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row3</td>
+                                <td>Wang wu</td>
+                                <td>13366645678</td>
+                                <td>中国广东深圳罗湖</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row4</td>
+                                <td>Wang zhe</td>
+                                <td>13388845678</td>
+                                <td>中国广东深圳宝安</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">共1页4条</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="cls"></div>
+            <div class="g-panel-success g-ws6 g-mt fl">
+                <div class="header"><span class="title">表格</span></div>
+                <div class="container">
+                    <table class="g-table-success g-w100">
+                        <thead>
+                            <tr>
+                                <td>编号</td>
+                                <td>Number</td>
+                                <td>Col3</td>
+                                <td>Col4</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>第一</td>
+                                <td>Zhang san</td>
+                                <td>13312345678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row2</td>
+                                <td>李四</td>
+                                <td>13355545678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row3</td>
+                                <td>Wang wu</td>
+                                <td>13366645678</td>
+                                <td>中国广东深圳罗湖</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row4</td>
+                                <td>Wang zhe</td>
+                                <td>13388845678</td>
+                                <td>中国广东深圳宝安</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">共1页4条</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="g-panel-warn g-ws6 g-mt fl">
+                <div class="header"><span class="title">表格</span></div>
+                <div class="container">
+                    <table class="g-table-warn g-w100">
+                        <thead>
+                            <tr>
+                                <td>编号</td>
+                                <td>Number</td>
+                                <td>Col3</td>
+                                <td>Col4</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>第一</td>
+                                <td>Zhang san</td>
+                                <td>13312345678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row2</td>
+                                <td>李四</td>
+                                <td>13355545678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row3</td>
+                                <td>Wang wu</td>
+                                <td>13366645678</td>
+                                <td>中国广东深圳罗湖</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row4</td>
+                                <td>Wang zhe</td>
+                                <td>13388845678</td>
+                                <td>中国广东深圳宝安</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">共1页4条</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="cls"></div>
+            <div class="g-panel-black g-ws6 g-mt fl">
+                <div class="header"><span class="title">表格</span></div>
+                <div class="container">
+                    <table class="g-table-black g-w100">
+                        <thead>
+                            <tr>
+                                <td>编号</td>
+                                <td>Number</td>
+                                <td>Col3</td>
+                                <td>Col4</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>第一</td>
+                                <td>Zhang san</td>
+                                <td>13312345678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row2</td>
+                                <td>李四</td>
+                                <td>13355545678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row3</td>
+                                <td>Wang wu</td>
+                                <td>13366645678</td>
+                                <td>中国广东深圳罗湖</td>
+                                <td>
+                                    <span class="g-btn-success"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row4</td>
+                                <td>Wang zhe</td>
+                                <td>13388845678</td>
+                                <td>中国广东深圳宝安</td>
+                                <td>
+                                    <a class="g-btn-success"><i class="fa fa-edit"></i>编辑</a>
+                                    <a class="g-btn-warn"><i class="fa fa-trash"></i>删除</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">共1页4条</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="g-panel-danger g-ws6 g-mt fl">
+                <div class="header"><span class="title">表格</span></div>
+                <div class="container">
+                    <table class="g-table-danger  g-w100">
+                        <thead>
+                            <tr>
+                                <td>编号</td>
+                                <td>Number</td>
+                                <td>Col3</td>
+                                <td>Col4</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>第一</td>
+                                <td>Zhang san</td>
+                                <td>13312345678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row2</td>
+                                <td>李四</td>
+                                <td>13355545678</td>
+                                <td>中国广东深圳</td>
+                                <td>
+                                    <span class="g-btn-success"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row3</td>
+                                <td>Wang wu</td>
+                                <td>13366645678</td>
+                                <td>中国广东深圳罗湖</td>
+                                <td>
+                                    <span class="g-btn-success"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger-s"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Row4</td>
+                                <td>Wang zhe</td>
+                                <td>13388845678</td>
+                                <td>中国广东深圳宝安</td>
+                                <td>
+                                    <span class="g-btn-success-s"><i class="fa fa-edit"></i>编辑</span>
+                                    <span class="g-btn-danger"><i class="fa fa-trash"></i>删除</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">共1页4条</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

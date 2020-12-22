@@ -1,0 +1,11 @@
+{
+    "commentTranslate.targetLanguage": "zh-CN",
+    "less.compile": {
+        "autoprefixer": "> 5%, last 2 Chrome versions, not ie 6-9",
+        "sourceMap": false,
+        "compress": false,
+        //"out": "${workspaceFolder}/src/css/",
+        "out": true,
+        "main": ["${workspaceFolder}/src/css/gcss-all.less"]
+    }
+}
